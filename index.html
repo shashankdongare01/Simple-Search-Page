@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Search Page</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+<!-- Header with Branding -->
+<header>
+    <div class="logo">
+        <img src="images/blogs.png" alt="Logo" />
+<!--        <h1>SearchPro</h1>-->
+    </div>
+    <p class="tagline">Find the information you need, instantly.</p>
+</header>
+
+<div class="container">
+    <!-- Search Box with Placeholder -->
+    <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Search for blog titles or categories..." />
+        <button onclick="search()">Search</button>
+    </div>
+
+    <!-- Filters for Category Selection -->
+    <div class="filters">
+        <select id="filterDropdown" onchange="filterResults(this.value)">
+            <option value="All">All Categories</option>
+            <option value="Tech">Tech</option>
+            <option value="Lifestyle">Lifestyle</option>
+        </select>
+    </div>
+
+    <!-- Loading Spinner -->
+    <div id="loading" style="display: none;">Loading...</div>
+
+    <!-- Results Section -->
+    <div class="results" id="results"></div>
+
+</div>
+
+<script src="js/script.js"></script>
+</body>
+</html>

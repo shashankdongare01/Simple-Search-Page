@@ -1,0 +1,148 @@
+/* Global Styles */
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f9f9f9;
+  color: #333;
+}
+
+h1 {
+  font-size: 2rem;
+  color: #007BFF;
+}
+
+header {
+  background-color: #007BFF;
+  color: white;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo img {
+  height: 40px;
+  margin-right: 10px;
+}
+
+.tagline {
+  font-size: 1.2rem;
+  margin-top: 5px;
+}
+
+/* Container Styles */
+.container {
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+}
+
+/* Search Box Styles */
+.search-box {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  animation: fadeIn 1s ease-out;
+}
+
+.search-box input {
+  flex: 1;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.search-box input:focus {
+  border-color: #007BFF;
+  outline: none;
+}
+
+.search-box button {
+  margin-left: 10px;
+  padding: 10px;
+  font-size: 16px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.search-box button:hover {
+  background-color: #0056b3;
+}
+
+/* Filters */
+.filters {
+  margin-bottom: 20px;
+  animation: fadeIn 1s ease-out;
+}
+
+.filters select {
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+/* Results Styles */
+.results {
+  border-top: 1px solid #ddd;
+  padding-top: 10px;
+}
+
+.result-item {
+  margin-bottom: 10px;
+  padding: 10px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  animation: fadeIn 1s ease-out;
+}
+
+
+/* Animations */
+@keyframes fadeIn {
+  0% { opacity: 0; }
+  100% { opacity: 1; }
+}
+
+/* Mobile-First Responsive Design */
+@media (max-width: 600px) {
+  .search-box {
+    flex-direction: column;
+  }
+
+  .search-box button {
+    margin-left: 0;
+    margin-top: 10px;
+  }
+
+  .filters {
+    margin-top: 10px;
+  }
+
+  .result-item {
+    padding: 15px;
+  }
+
+  .cta {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.5rem;
+  }
+}
